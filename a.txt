@@ -1,0 +1,7 @@
+https://blog.logrocket.com/rust-and-tui-building-a-command-line-interface-in-rust/
+
+https://github.com/zupzup/rust-commandline-example/blob/main/src/main.rs
+https://github.com/whoisryosuke/rust-json-parser/blob/main/src/parser.rs
+https://williamhuey.github.io/posts/rust-read-json-file/
+
+https://williamhuey.github.io/posts/rust-read-json-file/
