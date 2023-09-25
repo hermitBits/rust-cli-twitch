@@ -1,5 +1,7 @@
 use serde::{Deserialize, Serialize};
 use std::fs;
+use std::sync::Mutex;
+use lazy_static::lazy_static;
 
 const DB_PATH: &str = "./data/data-base.json";
 
@@ -109,4 +111,10 @@ impl ChannelRepository {
         fs::write(DB_PATH, &database_string).map_err(RepositoryError::IOError)?;
         Ok(())
     }
+}
+
+lazy_static! {
+    pub static ref GLOBAL_REPOSITORY: Mutex<ChannelRepository> = {
+        Mutex::new(ChannelRepository::new().unwrap())
+    };
 }
